@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: lightgray;
+}
+
+.hero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 23px;
+    background-color: lightgray;
+
+}
+
+.addloc{
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    background-color: #fff;
+    padding: 23px;
+    overflow: scroll;
+}
+.addloc form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 13px;
+    margin-bottom: 23px;
+    
+}
+
+.addloc form select {
+    width: 100%;
+    min-width: 25ch;
+    max-width: 40ch;
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 0.85rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    margin: 13px;
+}
+.addloc form label{
+    margin-left: 16px;
+}
+.addloc form input{
+    padding: 7px;
+    border: 0.4px solid lightgray;
+    margin: 13px;
+
+}
+.addloc form iframe{
+    margin: 13px;
+}
+.addloc form span{
+    margin: 13px;
+}
+
+.addloc form button {
+    background-color: chartreuse;
+    padding: 9px;
+    border: none;
+    margin: 23px;
+    cursor: pointer;
+}
+
+.addinventory{
+    position: absolute;
+    left: 34vw;
+    background-color: #fff;
+    width: 64vw;
+    padding: 23px;
+    min-height: 400px;
+    overflow: scroll;
+}
+
+.addinventory h1{
+    text-align: center;
+    margin: 23px auto;
+}
+
+
+.fillexist input{
+    width: 70px;
+    margin: 11px;
+}
+.fillexist select{
+    width: 70px;
+    margin-left: 30px;
+    text-align: center;
+
+}
+
+.fillexist label{
+    margin: 17.9px;
+    width: 75px;
+
+}
+
+#btn{
+    background-color: chartreuse;
+    padding: 16px;
+    border: none;
+    border-radius: 7px;
+    position: fixed;
+    bottom: 7px;
+    z-index: 1000;
+    left: 50vw;
+    cursor: pointer;
+}
+
+.downmenu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background-color: #fff;
+    padding: 23px;
+    text-align: right;
+}
+
+.downmenu span{
+    margin: 5px;
+}
+
+.downmenu span a{
+    margin: 0px;
+    color: black;
+    text-decoration: none;
+}
+
+.owner-details form{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 23px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 13px;
+}
+
+.details input{
+    margin-top: 9px;
+    padding: 9px;
+}
+.fillexist{
+    display: flex;
+    /* overflow: scroll; */
+}
+.topfill{
+    display: flex;
+    align-items: center;
+}
+
+.menufill{
+    display: inline-block;
+}
+
+.btn{
+    margin: auto 14px;
+    padding: 9px;
+    border-radius: 13px;
+    background-color: chartreuse;
+    border: none;
+    cursor: pointer;
+}
+#location{
+    position: relative;
+    left: 13px;
+}
+#width{
+    margin-left: 35px;margin-right: 35px;
+}
+
+#nearto{
+    position: relative;
+    left: 19px;
+    margin-right:33px
+}

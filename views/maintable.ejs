@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/proper.css">
+</head>
+<body>
+
+<%-include("topbar")-%> 
+
+<!-- <div class="mtable">
+
+
+
+<ul style="list-style: none;">
+  <%  for(var i=0; i<news.length; i++){  %>
+
+<li >
+
+      <div class="card d-flex cust" class="product" style="margin-bottom: 1rem; box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.289);" >
+      <div class="card-header d-flex "  style="min-width:100vw;">
+          <div >
+        <h6 id="productName">  <%= news[i][0] %> <%= news[i][1] %> </h6> <h6>  <%= news[i][2] %> </h6>
+          </div>
+          <div style="display: flex; align-items: center; padding-left: 52rem;" >
+              <a href="tel:+91<%= news[i][5] %>" style="margin-right:15px ;" ></a>
+          <a style="text-decoration: none;" href="https://wa.me/91<%= news[i][2] %>"></a>
+          </div>
+      </div>
+
+      <div class="card-body d-flex flex-row " style="justify-content: space-between;" >
+          <h6 class="card-title"> Max-Budget : <%= news[i][5] %></h6>
+          <p class="card-text text-danger"> <i class="ri-map-pin-line" style=""></i> <%=news[i][4] %></p>
+          <p class="card-text " style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">  <%= news[i][7] %></p>
+        
+       
+      </div>
+</div>
+
+</li>
+
+
+<% } %>
+</ul>
+
+
+</div> -->
+
+
+<section class="maintable">
+  <%  for(var i=0; i<news.length; i++){  %>
+<div class="maintable-list">
+  
+  <table class="utable">
+    <thead >
+      <tr>
+        <th>SR NO.</th>
+        <th>Details</th>
+        <th>Owner Details</th>
+        <th>Unit NO.</th>
+        <th>Matching Lead</th>
+        <th>Expectation</th>
+        <th>Assigned To</th>
+        <th>Status</th>
+        <th>Available From</th>
+        <th>Last Contacted Date & Time</th>
+        <th>Action</th>
+        <th>Ownership</th>
+      </tr>
+    </thead>
+    
+    
+    <tbody >
+      <tr>
+        
+        <td><%= news[i].number %></td>
+        <td><%= news[i].address %></td>
+        <td><%= news[i].subCategory %></td>
+        <td><%= news[i].size %></td>
+        <td><%= news[i].subLoc %></td>
+        <td><%= news[i].width %></td>
+        <td><%= news[i].metrics %></td>
+        <td><%= news[i].direction %></td>
+        <td><%= news[i].facing %></td>
+        <td><%= news[i].road %></td>
+        <td><%= news[i].near %></td>
+        <td><%= news[i].ownership %></td>
+      </tr>
+      
+    </tbody>
+  
+    
+  </table>
+</div>
+<% } %>
+</section>
+
+</body>
+</html>
