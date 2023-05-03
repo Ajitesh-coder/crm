@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 400;   
+}
+
+.top-bar{
+position: absolute;
+            top: 15px;
+            left: 8vw;
+            
+}
+
+.top-bar span{
+    font-size: 16px;
+    text-align: center;
+
+}
+
+.top-bar span a {
+    color: black;
+    text-decoration: none;
+    margin: 4px;
+}
+
+.top-bar nav{
+    border-bottom: 0.5px solid gray;
+    width: 92vw;
+}
+
+.top-bar nav ul{
+    display: flex;
+    position: relative;
+   
+}
+
+
+.top-bar nav ul li{
+    list-style: none;
+}
+
+.top-bar nav ul li a{
+    text-decoration: none;
+    color: #000;
+    padding: 7px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.top-bar nav ul li a::after{
+    content:"";
+    position: relative;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    border-left: 0.5px solid gray;
+    color: gray;
+}
+
+
+.top-bar nav ul li a:active{
+    border-bottom: 2px solid rgb(69, 69, 216);
+    border-radius: 3px;
+}
+
+
+.mtable{
+            position: absolute;
+                width:92%;
+                
+                top:170px;
+                left:8vw;
+}
+
+.mtable iframe{
+    z-index: -100;
+    width: 92%;
+}
+
+.listing{
+    color: rgb(69, 69, 216);
+    display: flex;
+    align-items: center;
+    margin-top: 53px;
+}
+
+.listing h2{
+    margin-left: 10px;
+}
+.table{
+    width: 70vw !important;
+    padding: 23px;
+}
+.listing a{
+    text-decoration: none;
+}
+.sold{
+    margin-top: 53px;
+}
+
+.sold h2{
+    color: green;
+}
+.sold h2 span a{
+    color: green;
+    text-decoration: none;
+}
+
+#myChart{
+                position: absolute;
+                    top: 205px;
+                    left: 8vw;
+}
+
+.btn{
+    background-color: rgb(69, 69, 216) !important;
+    color: #fff !important;
+    margin-top: 13px;
+    padding: 13px;
+    border: none;
+    cursor: pointer;
+    
+}
+.btn a{
+    color: #fff !important;
+    text-decoration: none;
+}
+.downbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 43px !important;
+    z-index: 1000 !important;
+}
+.downbar ul{
+    display: flex;
+    justify-content: space-between;
+
+}
+.downbar ul li{
+    list-style: none;
+    margin-top: 23px;
+    margin-left: 33px;
+}
+
+.downbar ul li a{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+.search{
+    flex: 1;
+    
+    
+}
+.search ul{
+    float: right;
+    margin-right: 10px;
+    border: 3px solid blue;
+    padding:7px;
+    border-radius:30px;
+}
+input{
+    background:transparent;
+    border: 0px;
+    outline: 0px;
+
+}
+.icon-search{
+    font-size:15px;
+    margin-right: 10px;
+}
+.sort{
+    flex: 1;
+}
+
+
+.maintable{
+    margin-top:200px;
+    margin-left: 120px;
+}
+.maintable-list{
+    width:100%;
+    padding: 10px;
+    margin-top: 10px;
+    background:#fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.1); 
+}
+
+table thead tr{
+    text-align: left !important;
+
+}
+
+
+table th,
+table td{
+    padding: 12px 15px !important;
+}
+table tbody tr{
+    
+    border-bottom: 1px solid #ddd !important;
+}
+
+
+/* tbody tr{
+    padding: 15px !important;
+} */
+table{
+    padding: 10px !important;
+    /* border-radius: 23px !important; */
+    background-color: #fff !important;
+}
+
+
+.dataTables_wrapper .dataTables_filter input {
+    margin: 23px !important;
+    border: 2px solid #000 !important;
+    border-radius: 23px !important;
+}
+.dataTables_filter input::after{
+    content: "&#x1F50E;&#xFE0E;";
+    position: absolute;
+    top: 100px;
+    width: 50px;
+    height: 50px;
+}
+.dataTables_length{
+    margin: 23px;
+}
+
+table.dataTable thead td{
+    border: none !important;
+}
+
+
+.color{
+    /* color: #fff; */
+    appearance: none;
+    padding: 13px;
+    border: none;
+}
+.color:active{
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(46, 46, 46);
+}
+
+.drop-menu-btn{
+    background-color: rgb(0, 73, 97);
+    color: #ddd;
+    text-align: center;
+    width: 30px;
+    cursor: pointer;
+}
+
+.drop-menu-btn:hover{
+    background-color: rgb(1, 46, 61);
+}
+
+.drop-menu-content{
+    display: flex !important;
+    flex-direction: column;
+    padding: 5px !important;
+    background-color: #fff;
+    box-shadow: 0.1px 0.2px 10px black;
+    position: relative;
+    top: 2px;
+    z-index: 100;
+    opacity: 0;
+    display: none;
+    transition: all 0.3s ;
+}
+.drop-menu-content a{
+    margin: 3px;
+}
+.drop-menu-content a:hover{
+    background-color:lightgray;
+}
+
+
+.block-1{
+    display: flex !important;
+    flex-direction: column;
+    height: 105px !important;
+    width:100px !important;
+}
+
+.drop-menu-btn:hover .drop-menu-content{
+    display: flex !important;
+    flex-direction: column;
+    opacity: 1;
+}
+
+.active{
+    display: flex !important;
+    flex-direction: column;
+    opacity: 1;
+}
+
+.dropbtn {
+    background-color: rgb(1, 46, 61);
+    color: white;
+    padding: 7px;
+    font-size: 12px;
+    border: none;
+    transition: all 0.3s;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: rgb(0, 73, 97);}
+
+  .forsalebtn{
+    border: none;
+    padding: 18px;
+    font-size: 16px;
+    cursor: pointer;
+  }

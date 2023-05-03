@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/proper.css">
+</head>
+<body>
+<%-include("sidebar")-%>
+
+
+
+<div class="top-bar">
+    <h1 class="prop-head">
+        Properties For Sales
+        <span class="info">
+           <a href="#"><i class="ri-information-fill"></i></a> 
+        </span>
+        <span class="star">
+         <a href="#" onclick="fillStar()"><i class="ri-star-line"></i></a>   
+        </span>
+    </h1>
+
+    <nav>
+        <ul>
+            <li><a href="/maintable">
+                <span>
+                    <i class="ri-home-7-line"></i>
+                </span>
+                Main Table</a></li>
+            <li><a href="/timeline">Timeline</a></li>
+            <li><a href="/maps">Map</a></li>
+        </ul>
+    </nav>
+
+    <div class="downbar">
+        <button class="btn"><a href="/addinventorytogether"><i class="ri-add-line"></i>  New Property</a></button>
+        <div class="sort">
+        <ul>
+            <li> <a href="#"><i class="ri-sort-asc"></i>Sort</a></li>
+
+        </ul>
+    </div>
+    <div class="search">
+        <ul>
+            <input type="search"  placeholder="Search...">
+            <a href=""><i class="fa fa-search icon-search"></i>
+            </a>
+
+
+        </ul>
+    </div>
+    </div>
+
+
+</div>
+
+
+<script>
+let fillStar = ()=>{
+        let star = document.querySelector('.star');
+    let isfill = false;
+    if(!isfill){
+        star.innerHTML = '<span class="star"><a href="#"><i class="ri-star-fill"></i></a></span>'
+        star.innerHTML.style.color = "#ffff00"
+        isfill= true;
+    }
+    else{
+        star.innerHTML = '<span class="star"><a href="#"><i class="ri-star-line"></i></a></span>'
+        star.style.color = "yellow"
+        isfill= false;
+    }
+}
+</script>
+
+</body>
+</html>

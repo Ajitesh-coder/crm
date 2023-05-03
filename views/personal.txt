@@ -1,0 +1,75 @@
+        <!-- <div class="owner-details">
+          <form action="#">
+
+            <div class="details">
+            <label for="ownerName">Owner name</label>
+            <input
+              type="text"
+              name="ownerName"
+              id="ownerName"
+              placeholder="Owner name"
+            />
+            </div>
+              <div class="details">
+            <label for="mobile">Mobile</label>
+            <input
+              type="number"
+              name="mobile"
+              id="number"
+              placeholder="Mobile"
+              minlength="10"
+              min="0"
+              max="9999999999"
+            />
+            </div>
+              <div class="details">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" />
+              </div>
+                <div class="details">
+            <label for="fatherName">Father Name</label>
+            <input
+              type="text"
+              name="fatherName"
+              id="fatherName"
+              placeholder="Father Name"
+            /></div>
+
+              <div class="details">
+            <label for="Address">Address</label>
+            <input type="text" name="Address" id="Address" />
+                </div>
+
+                  <div class="details">
+            <label for="HouseNo">House Number</label>
+            <input type="text" name="HouseNo" id="HouseNo" />
+
+            </div>
+            <div class="details">
+             <label for="Location">Location</label>
+            <input type="text" name="Location" id="Location" />
+            </div>
+            <div class="details">
+            <label for="Sublocation">Sub Location</label>
+            <input type="text" name="Sublocation" id="Sublocation" />
+            </div>
+            <div class="details">
+            <label for="City">City</label>
+            <input type="text" name="City" id="City" />
+            </div>
+            <div class="details">
+              
+            <label for="Pincode">Pincode</label>
+            <input type="number" name="Pincode" id="Pincode" />
+            </div>
+            <div class="details">
+            <label for="State">State</label>
+            <input type="text" name="State" id="State" />
+            </div>
+            <div class="details">
+              
+            <label for="Country">Country</label>
+            <input type="text" name="Country" id="Country" />
+            </div>
+          </form>
+        </div> -->

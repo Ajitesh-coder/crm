@@ -1,0 +1,565 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: lightgray;
+}
+
+.hero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 23px;
+    background-color: lightgray;
+
+}
+
+.addloc{
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    background-color: #fff;
+    padding: 23px;
+    overflow: scroll;
+    margin-bottom: 100p;
+}
+.addloc form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 13px;
+    margin-bottom: 23px;
+    
+}
+
+.addloc form select {
+    width: 100%;
+    min-width: 25ch;
+    max-width: 40ch;
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 0.85rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    margin: 13px;
+}
+.addloc form label{
+    margin-left: 16px;
+}
+.addloc form input{
+    padding: 7px;
+    border: 0.4px solid lightgray;
+    margin: 13px;
+
+}
+.addloc form iframe{
+    margin: 13px;
+}
+.addloc form span{
+    margin: 13px;
+}
+
+.addloc form button {
+    background-color: chartreuse;
+    padding: 9px;
+    border: none;
+    margin: 23px;
+    cursor: pointer;
+}
+
+.addinventory{
+    position: absolute;
+    left: 34vw;
+    background-color: #fff;
+    width: 64vw;
+    padding: 23px;
+    min-height: 400px;
+    overflow: scroll;
+}
+
+.addinventory h1{
+    text-align: center;
+    margin: 23px auto;
+}
+
+
+.fillexist input{
+    width: 70px;
+    margin: 11px;
+    /* appearance: none; */
+}
+.fillexist select{
+    width: 70px;
+    margin-left: 30px;
+    text-align: center;
+
+}
+
+.fillexist label{
+    margin: 17.9px;
+    width: 75px;
+
+}
+
+#btn{
+    background-color: chartreuse;
+    padding: 16px;
+    border: none;
+    border-radius: 7px;
+    position: fixed;
+    bottom: 7px;
+    z-index: 1000;
+    left: 50vw;
+    cursor: pointer;
+}
+
+.downmenu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background-color: #fff;
+    padding: 23px;
+    text-align: right;
+    min-height: 66px;
+}
+
+.downmenu span{
+    margin: 5px;
+}
+
+.downmenu span a{
+    margin: 0px;
+    color: black;
+    text-decoration: none;
+}
+
+.owner-details form{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 23px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 13px;
+}
+
+.details input{
+    margin-top: 9px;
+    padding: 9px;
+}
+.fillexist{
+    display: flex;
+    /* overflow: scroll; */
+    margin-bottom: 200px;
+}
+.topfill{
+    display: flex;
+    align-items: center;
+}
+
+.menufill{
+    display: inline-block;
+}
+
+.btn{
+    margin: auto 14px;
+    padding: 9px;
+    border-radius: 13px;
+    background-color: chartreuse;
+    border: none;
+    cursor: pointer;
+}
+#location{
+    position: relative;
+    left: 2px;
+    
+    
+}
+#width{
+    margin-left: 35px;margin-right: 35px;
+}
+
+#nearto{
+    position: relative;
+    left: 19px;
+    margin-right:33px
+}
+#ta{
+    margin-left: 15px;margin-right: 15px;
+    position: relative;
+    left: 20px;
+    
+}
+
+
+/* land */
+
+.landType{
+    display: flex;
+    flex-direction: row;
+    margin: 23px;
+    
+}
+#Cland{
+    border: none;
+    padding: 13px;
+    width: 220px;
+    margin:10px;
+    position: relative;
+    /* right: 10vw; */
+    /* background-color: chartreuse; */
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    border: 0.6px solid gray;
+    text-align: start;
+}
+#Iland{
+    border: none;
+    padding: 13px;
+    width: 220px;
+    margin:10px;
+    position: relative;
+    /* right: 10vw; */
+    /* background-color: chartreuse; */
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    border: 0.6px solid gray;
+    text-align: start;
+}
+#Aland{
+    border: none;
+    padding: 13px;
+    width: 220px;
+    margin:10px;
+    position: relative;
+    /* right: 10vw; */
+    /* background-color: chartreuse; */
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    border: 0.6px solid gray;
+    text-align: start;
+}
+
+#land{
+    border: none;
+    padding: 13px;
+    width: 220px;
+    margin:10px;
+    position: relative;
+    /* right: 10vw; */
+    /* background-color: chartreuse; */
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    border: 0.6px solid gray;
+    text-align: start;
+}
+#Inland{
+    border: none;
+    padding: 13px;
+    width: 220px;
+    margin:10px;
+    position: relative;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    border: 0.6px solid gray;
+    text-align: start;
+}
+#icity{
+    position: relative;
+    left: 10px;
+}
+#subloc{
+    position: relative;
+    left: 10px;
+}
+.builtup{
+    display: flex;
+    flex-direction: row;
+}
+.buildlabel{
+    display: flex;
+    flex-direction: column;
+}
+
+.buildinp{
+    display: flex;
+    flex-direction: column;
+    
+    padding: 13px;
+    
+}
+.buildlabel label{
+    width: 120px;
+} 
+.buildinp input{
+    margin: 5px auto;
+    width: 200px;
+    padding: 5px;
+}
+.buildlabel select{
+    width: 200px;
+    border: rgb(176, 176, 176);
+    background-color: #fff;
+} 
+
+#subc{
+    margin-top: 20px;
+    margin-left: 2px;
+    margin-bottom: 27px;
+}
+#unitype{
+    margin-bottom: 20px;
+}
+#floorT{
+    margin-bottom: 20px;
+}
+#floorOn{
+    margin-bottom: 20px;
+}
+#totlalB{
+    margin-bottom: 20px;
+}
+#buildarea{
+    margin-bottom: 20px;
+}
+#carpetarea{
+    margin-bottom: 20px;
+}
+#terracearea{
+    margin-bottom: 20px;
+}
+#groundfloor{
+    margin-bottom: 20px;
+}
+#secondfloor{
+    margin-bottom: 20px;
+}
+#thirdfloor{
+    margin-bottom: 20px;
+}
+#age{
+    margin-bottom: 36px;
+}
+#balcony{
+    margin-bottom: 17px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+#furnished{
+    width: 200px;
+    background-color: #fff;
+    margin-top: 11px;
+    margin-bottom: 20px;
+    margin-left: 1px;
+    padding: 5px;
+}
+
+.saleInput{
+    margin: auto 23px ;
+}
+#QuotePrice{
+    position: relative;
+    left: 17px;
+}
+
+#cat{
+    position: relative;
+    left: 17px;
+}
+#online{
+    position: relative;
+    left: 3px;
+}
+#CommunicationDate{
+    position: relative;
+    left: 47px;
+}
+#FollowUpDate{
+    position: relative;
+    left: 107px;
+}
+#User{
+    position: relative;
+    left: 270px;  
+    left: 270px;  
+}
+
+.rentInput input{
+    width: 110px;
+}
+#MaintanenceCharge{
+    position: relative;
+    left: 30px;
+}
+
+#RentEscallation{
+    position: relative;
+    left: 32px;
+    left: 32px;
+}
+
+#TotalRent{
+    position: relative;
+    left: 50px;
+}
+
+#FitoutPeriod{
+    position: relative;
+    left: 50px;
+}
+
+#fp{
+    margin: auto 43px ;
+}
+
+#User{
+    position: relative;
+    margin-left: -200px;
+    margin-left: -224px;
+}
+#Use{
+    position: relative;
+    left: 97px; 
+}
+
+/* popup */
+
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vw;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    display: none
+}
+.popup .content{
+    position: absolute;
+    top: 80%;
+    left: 100%;
+    transform: translate(-50%,-50%) scale(0);
+    background: #fff;
+    width: 450px;
+    height: 783px;
+    z-index:2 ;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.popup .close-btn{
+    position: absolute;
+    right: 20px;
+    top:20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.popup.active .overlay{
+    display: block;
+}
+.popup.active .content{
+    transition: all 0.5s;
+    transform: translate(-50%,-50%) scale(1);
+}
+.form-element input{
+    width:50%;
+    
+}
+.form-element label{
+ font-size: 17px;
+ font-weight: bold;
+}
+.form-element button{
+background-color: chartreuse;
+padding: 7px 15px; 
+border: none;
+border-radius: 7px;
+cursor: pointer;
+margin-top: 13px;
+}
+#ownerName{
+    margin-left: 11px;
+}
+#MobileNumber{
+    margin-left: 0px;
+}
+#Email{
+    margin-left: 73px;
+}
+#fatherName{
+    margin-left: 21px;
+}
+#Address{
+    margin-left: 59px;
+}
+#HouseNo{
+    margin-left: 44px;
+}
+#Location{
+    margin-left: 55px;
+}
+#Sublocation{
+    margin-left: 34px;
+}
+#City{
+    margin-left: 90px;
+}
+#Pincode{
+    margin-left: 65px;
+}
+#State{
+    margin-left: 86px;
+}
+#PCountry{
+    margin-left: 63px;
+}
+#demandfor{
+    margin-left: 56px;
+
+}

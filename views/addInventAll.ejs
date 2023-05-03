@@ -1,0 +1,2204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BHARAT PROPERTIES | addcommercialinventory</title>
+    <link rel="stylesheet" href="css/addInv.css" />
+   
+  </head>
+  <body>
+    <div class="hero">
+      <div class="addloc">
+        <h4>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+          >
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path
+              d="M6.414 16L16.556 5.858l-1.414-1.414L5 14.586V16h1.414zm.829 2H3v-4.243L14.435 2.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 18zM3 20h18v2H3v-2z"
+              fill="rgba(81,81,81,1)"
+            />
+          </svg>
+          Create Location
+        </h4>
+    
+        <form action="#">
+          <label for="location">Location</label>
+          <input
+            type="text"
+            name="location"
+            id="location"
+            placeholder="Enter Location"
+          />
+
+          <span>New Location</span>
+          <iframe
+            src="https://www.google.com.qa/maps/d/u/1/embed?mid=1Qa55OcDQrXXucbFKwTfi0HLGH6tccKY&ehbc=2E312F"
+            width="310"
+            height="200"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+          <!-- street -->
+          <!-- country  -->
+          <label for="Country">Country</label>
+          <input type="text" name="Country" id="Country" />
+          <label for="Zip">Zip Code</label>
+          <input type="text" name="Zip" id="Zip" />
+
+          <!-- select property type -->
+         
+          <select name="propType" id="propType">
+            <option value="commercial">Commercial</option>
+            <option value="residential">Residential</option>
+            <option value="industrial">Industrial</option>
+            <option value="institutional">Institutional</option>
+            <option value="agricultural">Agricultural</option>
+          </select>
+          <button>Confirm Location</button>
+        </form>
+      </div>
+
+
+      <div class="addinventory" id="commercial">
+        <h1>Add Inventory (Commercial)</h1>
+
+        <div class="fillexist">
+          <form action="/addinginventory" class="filldata" method="post"> 
+            <div class="topfill">
+              <!-- <input type="checkbox" name="check" id="check1"/> -->
+              <input type="hidden" name="PropType" value="Commercial">
+              <label for="Number">Property Number</label>
+              <!-- <label for="SubCategory">SubCategory</label> -->
+              <label for="Size">Size</label>
+              <label for="subloc">Sub Location</label>
+              <label for="width">Width </label>
+              <label for="len">Length</label>
+              <label for="ta">Total Area</label>
+              <label for="metrics">Plot Area</label>
+              <label for="Direction">Direction</label>
+              <label for="facing">Facing</label>
+              <label for="road">Road</label>
+              <label for="nearto">Near To</label>
+              <label for="ownership">Ownership</label>
+              <label for="location">Location</label>
+              <label for="detailing">Owner Details</label>
+            </div>
+
+            <div class="menufill" id="addNew">
+              <!-- <input type="checkbox" name="check" id="check2" /> -->
+              <input type="number" name="number" id="inNumber" min="0" />
+              <select name="size" id="size">
+                <option value="SCO">SCO</option>
+                <option value="SCF">SCF</option>
+                <option value="Booth">Booth</option>
+                <option value="Dss">Dss</option>
+                <option value="Keosak">Keosak</option>
+                <option value="Plot">Plot</option>
+              </select>
+              <input name="subLoc" id="subloc">
+              </input>
+              <input type="number" name="width" id="width" min="0" />
+              <input type="number" name="len" id="len" min="0" />
+              <input type="number" name="ta" id="ta" min="0" />
+              <!-- <input type="number" name="" id=""> -->
+              <select name="metrics" id="metrics">
+                <option value="Metre">Metrics</option>
+                <option value="sqaure yard">Sq Yard</option>
+                <option value="acre">Acre</option>
+                <option value="kanal">Kanal</option>
+              </select>
+              <select name="direction" id="direction">
+                <option value="north">North</option>
+                <option value="south">South</option>
+                <option value="east">East</option>
+                <option value="northeast">NorthEast</option>
+                <option value="southeast">SouthEast</option>
+                <option value="northwest">NorthWest</option>
+                <option value="southwest">SouthWest</option>
+              </select>
+              <select name="facing" id="facing">
+                <option value="Yes">Parking</option>
+                <option value="No">Dead Face</option>
+              </select>
+              <select name="road" id="road">
+                <option value="9 Meter">9Mtr</option>
+                <option value="12 Meter">12Mtr</option>
+                <option value="18 Meter">18Mtr</option>
+                <option value="34 Meter">24Mtr</option>
+                <option value="60 Meter">60Mtr</option>
+              </select>
+              <select name="near" id="nearto">
+                <option value="school">School</option>
+                <option value="Station">Station</option>
+                <option value="BusStand">Bus Stand</option>
+                <option value="MainRoad">Main Road</option>
+                <option value="Highway">HighWay</option>
+              </select>
+              <select name="ownership" id="ownership">
+                <option value="Freehold">Freehold</option>
+                <option value="Leasehold">LeaseHold</option>
+              </select>
+
+              <a href="https://www.google.com.qa/maps/d/u/0/viewer?mid=1Qa55OcDQrXXucbFKwTfi0HLGH6tccKY&ll=29.967200950084447%2C76.89341714999996&z=19"><span class="btn" id="location"> Location </span></a>
+              <span onclick="togglePopup()" class="btn">Owner Details</span>
+            </div>
+         <!-- popup start -->
+         <div class="popup" id="popup-1">
+          <div class="overlay"></div>
+          <div class="content">
+              <div class="close-btn" onclick="togglePopup()">
+                  &times;
+              </div>
+              <h1>Owner Details</h1>
+              <div class="form">
+            <div class="form-element">
+              <label for="ownerName">Owner Details</label>
+              <input
+              type="text"
+              name="ownerName"
+              id="ownerName"
+            />
+            </div>
+            <div class="form-element">
+              <label for="MobileNumber">Mobile Number</label>
+              <input
+              type="text"
+              name="MobileNumber"
+              id="MobileNumber"
+              minlength="10"
+              min="0"
+              max="9999999999"
+              
+            />
+            </div>
+            <div class="form-element">
+              <label for="Email">Email</label>
+              <input
+              type="text"
+              name="Email"
+              id="Email"   
+            />
+            </div>
+
+          
+
+            <div class="form-element">
+              <label for="lastcontacted">Last Contacted</label>
+              <input
+              type="datetime-local"
+              name="lastcontact"
+              id="lastcontacted"
+            />
+            </div>
+            
+            <div class="form-element">
+              <label for="fatherName">Father Name</label>
+              <input
+              type="text"
+              name="fatherName"
+              id="fatherName"
+              
+            />
+            </div>
+            <div class="form-element">
+              <label for="Address">Address</label>
+              <input
+              type="text"
+              name="Address"
+              id="Address"
+              
+            />
+            </div>
+            <div class="form-element">
+              <label for="HouseNo">House No.</label>
+              <input
+              type="text"
+              name="HouseNo"
+              id="HouseNo"
+              
+            />
+            </div>
+            <div class="form-element">
+              <label for="Location">Location</label>
+              <input
+              type="text"
+              name="Location"
+              id="Location"
+            />
+            </div>
+            <div class="form-element">
+              <label for="Sublocation">Sublocation</label>
+              <input
+              type="text"
+              name="Sublocation"
+              id="Sublocation"
+              
+            />
+            </div>
+            <div class="form-element">
+              <label for="City">City</label>
+              <input
+              type="text"
+              name="City"
+              id="City"
+              
+            />
+            </div>
+            <div class="form-element">
+              <label for="Pincode">Pincode</label>
+              <input
+              type="number"
+              name="Pincode"
+              id="Pincode"
+              
+            />
+            </div>
+            <div class="form-element">
+              <label for="State">State</label>
+              <input
+              type="text"
+              name="State"
+              id="State"
+              
+            />
+            </div>
+            <div class="form-element">
+              <label for="PCountry">Country</label>
+              <input
+              type="text"
+              name="PCountry"
+              id="PCountry"
+              
+            />
+            </div>
+            <div class="form-element">
+             <button>Submit</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- popup end -->
+
+            <div>
+              <select name="land" id="Cland">
+                <option value="landtype">Land Type</option>
+                <option value="Cbuiltup">Built Up</option>
+                <option value="Cforsale">For Sale</option>
+                <option value="Crent">For Rent/Lease</option>
+              </select>
+              <div class="landType data" id="Cbuiltup">
+                <div class="builtup">
+                  <div class="buildlabel">
+                    <label for="occdate">Occupation Date</label>
+                    <label for="occdate">Sub Category</label>
+                    <label for="occdate">Unit Type</label>
+                    <label for="occdate">Total Floor</label>
+                    <label for="occdate">Floor On</label>
+                    <label for="occdate">Super Area</label>
+                    <label for="occdate">Buildup Area</label>
+                    <label for="occdate">Carpet Area</label>
+                    
+                    <label for="occdate" id="groundf">Ground Floor</label>
+                    <label for="occdate" id="sf">Second Floor</label>
+                    <label for="occdate" id="tf">Third Floor</label>
+                    <label for="occdate" id="af">Age of construction</label>
+                    <label for="occdate" id="bal">Balcony</label>
+                    <label for="occdate" id="fs">Furnished Status</label>
+                    <label for="occdate" id="ame">Amenities</label>
+                  </div>
+                </div>
+
+                <div class="buildinp">
+                  <input type="date" name="bdate" id="bdate" />
+                  <select name="subcategory" id="subc">
+                    <option value="House">House</option>
+                    <option value="BuilderFloor">Builder Floor</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Duplex">Duplex</option>
+                    <option value="Triplex">Triplex</option>
+                    <option value="Bunglow">Bunglow</option>
+                    <option value="HBC House">HBC House</option>
+                    <option value="halfconst">25% Constructed</option>
+                    <option value="boundryWall">Boundary Wall</option>
+                  </select>
+                  <input type="number" name="unitype" id="unitype" min="0" />
+                  <input type="number" name="floorT" id="floorT" />
+                  <input type="number" name="floorOn" id="floorOn" />
+                  <input type="number" name="totalB" id="totlalB" />
+                  <input type="number" name="buildarea" id="buildarea" />
+                  <input type="number" name="carpetarea" id="carpetarea" />
+                 
+                  <input type="number" name="groundfloor" id="groundfloor" />
+                  <input type="number" name="secondfloor" id="secondfloor" />
+                  <input type="number" name="thirdfloor" id="thirdfloor" />
+
+                
+
+                  <input type="number" name="age" id="age" />
+                  <input type="number" name="balcony" id="balcony" />
+                  <select name="furnished" id="furnished">
+                    <option value="Furnished">Furnished</option>
+                    <option value="unFurnished">Un-Furnished</option>
+                    <option value="SemiFurnished">Semi-Furnished</option>
+                  </select>
+                  <input type="number" name="amenities" id="amenities" />
+
+                 
+                </div>
+              </div>
+            </div>
+
+            <div class="forSale data" id="Cforsale">
+              <div class="saleLabel">
+                <label for="Exprice">Expected Price</label>
+                <label for="Priceper">Price per </label>
+                <label for="QuotePrice">Quote Price</label>
+                <label for="DealType">Deal Type</label>
+                <label for="Source">Source</label>
+                <label for="CommunicationDate">Communication Date</label>
+                <label for="FollowUpDate">Follow Up Date</label>
+                <label for="User">User</label>
+              </div>
+              <div class="saleInput">
+                <input type="number" name="exPrice" id="exPrice" />
+                <select name="Priceper" id="Priceper">
+                  <option value="Sq yard">Sq yard</option>
+                  <option value="meter">meter</option>
+                  <option value="feet">feet</option>
+                </select>
+                <input type="number" name="QuotePrice" id="QuotePrice" />
+                <select id="cat">
+                  <option value="Hot">Hot</option>
+                  <option value="Warm">Warm</option>
+                  <option value="Cold">Cold</option>
+                </select>
+                <select id="online"> 
+                  <option value="Facebook">Facebook</option>
+                  <option value="Olx">Olx</option>
+                  <option value="nintynineAcre">99 Acre</option>
+                  <option value="Walkin">Walkin</option>
+                  <option value="Hoarding">Hoarding</option>
+                  <option value="Google">Google</option>
+                  <option value="SquareYards">Square Yards</option>
+                  <option value="Megicbricks">Megicbricks</option>
+                </select>
+                <input
+                  type="date"
+                  name="CommunicationDate"
+                  id="CommunicationDate"
+                />
+                <input type="date" name="FollowUpDate" id="FollowUpDate" />
+                <select name="User" id="Use">
+                  <option value="Admin">Admin</option>
+                  <option value="Sales Manager">Sales Manager</option>
+                  <option value="Astt Sales Manager">Astt Sales Manager</option>
+                  <option value="Inventory Manager">Inventory Manager</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="rentu data" id="Crent">
+              <div class="rentLabel">
+                <label for="RentAmmount">Rent Ammount</label>
+                <label for="LockInPeriod">Lock In Period</label>
+                <label for="SecurityDeposit">Security Deposit</label>
+                <label for="MaintanenceCharge">Maintanence Charge</label>
+                <label for="RentEscallation">Rent Escallation</label>
+                <label for="TotalRent">TotalRent</label>
+                <label for="FitoutPeriod" id="fp">Fitout Period</label>
+                <label for="User">User</label>
+              </div>
+              <div class="rentInput">
+                <input type="number" name="RentAmmount" id="RentAmmount" />
+                <input type="text" name="LockInPeriod" id="LockInPeriod" />
+                <input type="number" name="SecurityDeposit" id="SecurityDeposit" />
+                <input type="number" name="RentEscallation" id="RentEscallation" />
+                <input
+                type="number"
+                name="MaintanenceCharge"
+                id="MaintanenceCharge"
+              />
+                <input type="number" name="TotalRent" id="TotalRent" />
+                <input type="number" name="FitoutPeriod" id="FitoutPeriod" />
+                <select name="User" id="User">
+                  <option value="Admin">Admin</option>
+                  <option value="Sales Manager">Sales Manager</option>
+                  <option value="Astt Sales Manager">Astt Sales Manager</option>
+                  <option value="Inventory Manager">Inventory Manager</option>
+                </select>
+              </div>
+            </div>
+
+            <button id="btn" type="submit">Submit Inventory</button>
+          </form>
+          </form>
+        </div>
+      </div>
+      <div class="addinventory" id="residential">
+        <h1>Add Inventory (Residential)</h1>
+
+        <div class="fillexist">
+          <form action="/addinginventory" class="filldata" method="post">
+            <div class="topfill">
+              <input type="hidden" name="PropType" value="Residential">
+              <label for="Number">Property Number</label>
+              <label for="Size">Size</label>
+              <label for="Size">City</label>
+              <label for="subloc">Sub Location</label>
+              <label for="width">Width </label>
+              <label for="len">Length</label>
+              <label for="ta">Total Area</label>
+              <label for="metrics">Plot Area</label>
+              <label for="Direction">Direction</label>
+              <label for="facing">Facing</label>
+              <label for="road">Road</label>
+              <label for="nearto">Near To</label>
+              <label for="ownership">Ownership</label>
+              <label for="location">Location</label>
+              <label for="detailing">Owner Details</label>
+            </div>
+
+            <div class="menufill" id="addNew">
+              <input type="number" name="number" id="inNumber" min="0" />
+              <select name="size" id="size">
+                <option value="1BHK">1 BHK</option>
+                <option value="2BHK">2 BHK</option>
+                <option value="2.1">2.1 BHK</option>
+                <option value="3BHK">3 BHK</option>
+                <option value="3.5">3.5 BHK</option>
+                <option value="4BHK">4 BHK</option>
+                <option value="4.5">4.5 BHK</option>
+                <option value="5BHK">5 BHK</option>
+              </select>
+              <input type="text" name="icity" id="icity" min="0" />
+              <input type="text" name="subLoc" id="subLoc"/>
+              <input type="number" name="width" id="width" min="0" />
+              <input type="number" name="len" id="len" min="0" />
+              <input type="number" name="ta" id="ta" min="0" />
+              <!-- <input type="number" name="" id=""> -->
+              <select name="metrics" id="metrics">
+                <option value="Metre">Metrics</option>
+                <option value="sqaure yard">Sq Yard</option>
+                <option value="acre">Acre</option>
+                <option value="kanal">Kanal</option>
+              </select>
+              <select name="direction" id="direction">
+                <option value="north">North</option>
+                <option value="south">South</option>
+                <option value="east">East</option>
+                <option value="northeast">NorthEast</option>
+                <option value="southeast">SouthEast</option>
+                <option value="northwest">NorthWest</option>
+                <option value="southwest">SouthWest</option>
+              </select>
+              <select name="facing" id="facing">
+                <option value="Yes">Parking</option>
+                <option value="No">Dead Face</option>
+              </select>
+              <select name="road" id="road">
+                <option value="9 Meter">9Mtr</option>
+                <option value="12 Meter">12Mtr</option>
+                <option value="18 Meter">18Mtr</option>
+                <option value="34 Meter">24Mtr</option>
+                <option value="60 Meter">60Mtr</option>
+              </select>
+              <select name="near" id="nearto">
+                <option value="school">School</option>
+                <option value="Station">Station</option>
+                <option value="BusStand">Bus Stand</option>
+                <option value="MainRoad">Main Road</option>
+                <option value="Highway">HighWay</option>
+              </select>
+              <select name="ownership" id="ownership">
+                <option value="Freehold">Freehold</option>
+                <option value="Leasehold">LeaseHold</option>
+              </select>
+
+              <a href="https://www.google.com.qa/maps/d/viewer?mid=1Qa55OcDQrXXucbFKwTfi0HLGH6tccKY&ll=29.967200950084447%2C76.89341714999996&z=19"><span class="btn" id="location"> Location </span></a>
+              <span onclick="togglePopup()" class="btn">Owner Details</span>
+              
+            </div>
+            <!-- popup start -->
+            <div class="popup" id="popup-1">
+              <div class="overlay"></div>
+              <div class="content">
+                  <div class="close-btn" onclick="togglePopup()">
+                      &times;
+                  </div>
+                  <h1>Owner Details</h1>
+                  <div class="form">
+                <div class="form-element">
+                  <label for="ownerName">Owner Details</label>
+                  <input
+                  type="text"
+                  name="ownerName"
+                  id="ownerName"
+                />
+                </div>
+                <div class="form-element">
+                  <label for="MobileNumber">Mobile Number</label>
+                  <input
+                  type="text"
+                  name="MobileNumber"
+                  id="MobileNumber"
+                  minlength="10"
+                  min="0"
+                  max="9999999999"
+                  
+                />
+                </div>
+                <div class="form-element">
+                  <label for="Email">Email</label>
+                  <input
+                  type="text"
+                  name="Email"
+                  id="Email"   
+                />
+                </div>
+
+                <div class="form-element">
+                  <label for="lastcontacted">Last Contacted</label>
+                  <input
+                  type="datetime-local"
+                  name="lastcontact"
+                  id="lastcontacted"
+                />
+                </div>
+                
+                <div class="form-element">
+                  <label for="fatherName">Father Name</label>
+                  <input
+                  type="text"
+                  name="fatherName"
+                  id="fatherName"
+                  
+                />
+                </div>
+                <div class="form-element">
+                  <label for="Address">Address</label>
+                  <input
+                  type="text"
+                  name="Address"
+                  id="Address"
+                  
+                />
+                </div>
+                <div class="form-element">
+                  <label for="HouseNo">House No.</label>
+                  <input
+                  type="text"
+                  name="HouseNo"
+                  id="HouseNo"
+                  
+                />
+                </div>
+                <div class="form-element">
+                  <label for="Location">Location</label>
+                  <input
+                  type="text"
+                  name="Location"
+                  id="Location"
+                />
+                </div>
+                <div class="form-element">
+                  <label for="Sublocation">Sublocation</label>
+                  <input
+                  type="text"
+                  name="Sublocation"
+                  id="Sublocation"
+                  
+                />
+                </div>
+                <div class="form-element">
+                  <label for="City">City</label>
+                  <input
+                  type="text"
+                  name="City"
+                  id="City"
+                  
+                />
+                </div>
+                <div class="form-element">
+                  <label for="Pincode">Pincode</label>
+                  <input
+                  type="number"
+                  name="Pincode"
+                  id="Pincode"
+                  
+                />
+                </div>
+                <div class="form-element">
+                  <label for="State">State</label>
+                  <input
+                  type="text"
+                  name="State"
+                  id="State"
+                  
+                />
+                </div>
+                <div class="form-element">
+                  <label for="PCountry">Country</label>
+                  <input
+                  type="text"
+                  name="PCountry"
+                  id="PCountry"
+                  
+                />
+                </div>
+                <div class="form-element">
+                 <button>Submit</button>
+                </div>
+              </div>
+            </div>
+            </div>
+            <!-- popup end -->
+
+            <div>
+              <select name="land" id="land">
+                <option value="landtype">Land Type</option>
+                <option value="builtup">Built Up</option>
+                <option value="forsale">For Sale</option>
+                <option value="rent">For Rent/Lease</option>
+              </select>
+              <div class="landType data" id="builtup">
+                <div class="builtup">
+                  <div class="buildlabel">
+                    <label for="occdate">Occupation Date</label>
+                    <label for="occdate">Sub Category</label>
+                    <label for="occdate">Unit Type</label>
+                    <label for="occdate">Total Floor</label>
+                    <label for="occdate">Floor On</label>
+                    <label for="occdate">Super Area</label>
+                    <label for="occdate">Buildup Area</label>
+                    <label for="occdate">Carpet Area</label>
+                    <label for="occdate">Terrace Area</label>
+                    <label for="occdate" id="groundf">Ground Floor</label>
+                    <label for="occdate" id="sf">Second Floor</label>
+                    <label for="occdate" id="tf">Third Floor</label>
+                    <label for="occdate" id="af">Age of construction</label>
+                    <label for="occdate" id="bal">Balcony</label>
+                    <label for="occdate" id="fs">Furnished Status</label>
+                    <label for="occdate" id="ame">Amenities</label>
+                  </div>
+                </div>
+
+                <div class="buildinp">
+                  <input type="date" name="bdate" id="bdate" />
+                  <select name="subcategory" id="subc">
+                    <option value="House">House</option>
+                    <option value="BuilderFloor">Builder Floor</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Duplex">Duplex</option>
+                    <option value="Triplex">Triplex</option>
+                    <option value="Bunglow">Bunglow</option>
+                    <option value="HBC House">HBC House</option>
+                    <option value="halfconst">25% Constructed</option>
+                    <option value="boundryWall">Boundary Wall</option>
+                  </select>
+                  <input type="number" name="unitype" id="unitype" min="0" />
+                  <input type="number" name="floorT" id="floorT" />
+                  <input type="number" name="floorOn" id="floorOn" />
+                  <input type="number" name="totalB" id="totlalB" />
+                  <input type="number" name="buildarea" id="buildarea" />
+                  <input type="number" name="carpetarea" id="carpetarea" />
+                  <input type="number" name="terracearea" id="terracearea" />
+                  <input type="number" name="groundfloor" id="groundfloor" />
+                  <input type="number" name="secondfloor" id="secondfloor" />
+                  <input type="number" name="thirdfloor" id="thirdfloor" />
+
+                 
+
+                 
+
+                  <input type="number" name="age" id="age" />
+                  <input type="number" name="balcony" id="balcony" />
+                  <select name="furnished" id="furnished">
+                    <option value="Furnished">Furnished</option>
+                    <option value="unFurnished">Un-Furnished</option>
+                    <option value="SemiFurnished">Semi-Furnished</option>
+                  </select>
+                  <input type="number" name="amenities" id="amenities" />
+
+                 
+                </div>
+              </div>
+            </div>
+
+            <div class="forSale data" id="forsale">
+              <div class="saleLabel">
+                <label for="Exprice">Expected Price</label>
+                <label for="Priceper">Price per </label>
+                <label for="QuotePrice">Quote Price</label>
+                <label for="DealType">Deal Type</label>
+                <label for="Source">Source</label>
+                <label for="CommunicationDate">Communication Date</label>
+                <label for="FollowUpDate">Follow Up Date</label>
+                <label for="User">User</label>
+              </div>
+              <div class="saleInput">
+                <input type="number" name="exPrice" id="exPrice" />
+                <select name="Priceper" id="Priceper">
+                  <option value="Sq yard">Sq yard</option>
+                  <option value="meter">meter</option>
+                  <option value="feet">feet</option>
+                </select>
+                <input type="number" name="QuotePrice" id="QuotePrice" />
+                <select id="cat" name="cat">
+                  <option value="Hot">Hot</option>
+                  <option value="Warm">Warm</option>
+                  <option value="Cold">Cold</option>
+                </select>
+                <select id="online" name="online">
+                  <option value="Facebook">Facebook</option>
+                  <option value="Olx">Olx</option>
+                  <option value="nintynineAcre">99 Acre</option>
+                  <option value="Walkin">Walkin</option>
+                  <option value="Hoarding">Hoarding</option>
+                  <option value="Google">Google</option>
+                  <option value="SquareYards">Square Yards</option>
+                  <option value="Megicbricks">Megicbricks</option>
+                </select>
+                <input
+                  type="date"
+                  name="CommunicationDate"
+                  id="CommunicationDate"
+                />
+                <input type="date" name="FollowUpDate" id="FollowUpDate" />
+                <select name="User" id="Use">
+                  <option value="Admin">Admin</option>
+                  <option value="Sales Manager">Sales Manager</option>
+                  <option value="Astt Sales Manager">Astt Sales Manager</option>
+                  <option value="Inventory Manager">Inventory Manager</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="rentu data" id="rent">
+              <div class="rentLabel">
+                <label for="RentAmmount">Rent Ammount</label>
+                <label for="LockInPeriod">Lock In Period</label>
+                <label for="SecurityDeposit">Security Deposit</label>
+                <label for="MaintanenceCharge">Maintanence Charge</label>
+                <label for="RentEscallation">Rent Escallation</label>
+                <label for="TotalRent">TotalRent</label>
+                <label for="FitoutPeriod" id="fp">Fitout Period</label>
+                <label for="User">User</label>
+              </div>
+              <div class="rentInput">
+                <input type="number" name="RentAmmount" id="RentAmmount" />
+                <input type="text" name="LockInPeriod" id="LockInPeriod" />
+                <input
+                  type="number"
+                  name="SecurityDeposit"
+                  id="SecurityDeposit"
+                />
+                <input
+                type="number"
+                name="MaintanenceCharge"
+                id="MaintanenceCharge"
+              />
+                <input
+                  type="text"
+                  name="RentEscallation"
+                  id="RentEscallation"
+                />
+                <input type="number" name="TotalRent" id="TotalRent" />
+                <input type="number" name="FitoutPeriod" id="FitoutPeriod" />
+                <select name="User" id="User">
+                  <option value="Admin">Admin</option>
+                  <option value="Sales Manager">Sales Manager</option>
+                  <option value="Astt Sales Manager">Astt Sales Manager</option>
+                  <option value="Inventory Manager">Inventory Manager</option>
+                </select>
+              </div>
+            </div>
+
+            <button id="btn" type="submit">Submit Inventory</button>
+          </form>
+          </form>
+        </div>
+      </div>
+      <div class="addinventory" id="industrial">
+        <h1>Add Inventory (Industrial)</h1>
+
+        <div class="fillexist">
+          <form action="/addinginventory" class="filldata" method="post">
+            <div class="topfill">
+              <!-- <input type="checkbox" name="check" id="check1"/> -->
+              <input type="hidden" name="PropType" value="Industrial">
+              <label for="Number">Property Number</label>
+              <!-- <label for="SubCategory">SubCategory</label> -->
+              <label for="Size">Size</label>
+              <label for="subloc">Sub Location</label>
+              <label for="width">Width </label>
+              <label for="len">Length</label>
+              <label for="ta">Total Area</label>
+              <label for="metrics">Plot Area</label>
+              <label for="Direction">Direction</label>
+              <label for="facing">Facing</label>
+              <label for="road">Road</label>
+              <label for="nearto">Near To</label>
+              <label for="ownership">Ownership</label>
+              <label for="location">Location</label>
+              <label for="detailing">Owner Details</label>
+            </div>
+
+            <div class="menufill" id="addNew">
+              <!-- <input type="checkbox" name="check" id="check2" /> -->
+              <input type="number" name="number" id="inNumber" min="0" />
+              <!-- <select id="subCategory" name="subCategory">
+                <option value="Shop">Shop</option>
+                <option value="Showroom">Showroom</option>
+                <option value="Office">Office</option>
+                <option value="RetailStore">RetailStore</option>
+                <option value="HyperMarket">HyperMarket</option>
+                <option value="SOHO">SOHO</option>
+                <option value="Multiplex">Multiplex</option>
+              </select> -->
+              <select name="size" id="size">
+                <option value="Factory">Factory</option>
+                <option value="IndustrialBuilding">Industrial Building</option>
+                <option value="ColdStorage">Cold Storage</option>
+                <option value="WareHouse">Ware House</option>
+                
+              </select>
+              <select name="subLoc" id="subloc">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+              </select>
+              <input type="number" name="width" id="width" min="0" />
+              <input type="number" name="len" id="len" min="0" />
+              <input type="number" name="ta" id="ta" min="0" />
+              <!-- <input type="number" name="" id=""> -->
+              <select name="metrics" id="metrics">
+                <option value="Metre">Metrics</option>
+                <option value="sqaure yard">Sq Yard</option>
+                <option value="acre">Acre</option>
+                <option value="kanal">Kanal</option>
+              </select>
+              <select name="direction" id="direction">
+                <option value="north">North</option>
+                <option value="south">South</option>
+                <option value="east">East</option>
+                <option value="northeast">NorthEast</option>
+                <option value="southeast">SouthEast</option>
+                <option value="northwest">NorthWest</option>
+                <option value="southwest">SouthWest</option>
+              </select>
+              <select name="facing" id="facing">
+                <option value="Yes">Parking</option>
+                <option value="No">Dead Face</option>
+              </select>
+              <select name="road" id="road">
+                <option value="9 Meter">9Mtr</option>
+                <option value="12 Meter">12Mtr</option>
+                <option value="18 Meter">18Mtr</option>
+                <option value="34 Meter">24Mtr</option>
+                <option value="60 Meter">60Mtr</option>
+              </select>
+              <select name="near" id="nearto">
+                <option value="school">School</option>
+                <option value="Station">Station</option>
+                <option value="BusStand">Bus Stand</option>
+                <option value="MainRoad">Main Road</option>
+                <option value="Highway">HighWay</option>
+              </select>
+              <select name="ownership" id="ownership">
+                <option value="Freehold">Freehold</option>
+                <option value="Leasehold">LeaseHold</option>
+              </select>
+
+             
+              <a href="https://www.google.com.qa/maps/d/u/0/viewer?mid=1Qa55OcDQrXXucbFKwTfi0HLGH6tccKY&ll=29.967200950084447%2C76.89341714999996&z=19"><span class="btn" id="location"> Location </span></a>
+              <span onclick="togglePopup()" class="btn">Owner Details</span>
+            </div>
+           <!-- popup start -->
+          <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup()">
+                    &times;
+                </div>
+                <h1>Owner Details</h1>
+                <div class="form">
+              <div class="form-element">
+                <label for="ownerName">Owner Details</label>
+                <input
+                type="text"
+                name="ownerName"
+                id="ownerName"
+              />
+              </div>
+              <div class="form-element">
+                <label for="MobileNumber">Mobile Number</label>
+                <input
+                type="text"
+                name="MobileNumber"
+                id="MobileNumber"
+                minlength="10"
+                min="0"
+                max="9999999999"
+                
+              />
+              </div>
+              <div class="form-element">
+                <label for="Email">Email</label>
+                <input
+                type="text"
+                name="Email"
+                id="Email"   
+              />
+              </div>
+
+              <div class="form-element">
+                <label for="lastcontacted">Last Contacted</label>
+                <input
+                type="datetime-local"
+                name="lastcontact"
+                id="lastcontacted"
+              />
+              </div>
+              
+              <div class="form-element">
+                <label for="fatherName">Father Name</label>
+                <input
+                type="text"
+                name="fatherName"
+                id="fatherName"
+                
+              />
+              </div>
+              <div class="form-element">
+                <label for="Address">Address</label>
+                <input
+                type="text"
+                name="Address"
+                id="Address"
+                
+              />
+              </div>
+              <div class="form-element">
+                <label for="HouseNo">House No.</label>
+                <input
+                type="text"
+                name="HouseNo"
+                id="HouseNo"
+                
+              />
+              </div>
+              <div class="form-element">
+                <label for="Location">Location</label>
+                <input
+                type="text"
+                name="Location"
+                id="Location"
+              />
+              </div>
+              <div class="form-element">
+                <label for="Sublocation">Sublocation</label>
+                <input
+                type="text"
+                name="Sublocation"
+                id="Sublocation"
+                
+              />
+              </div>
+              <div class="form-element">
+                <label for="City">City</label>
+                <input
+                type="text"
+                name="City"
+                id="City"
+                
+              />
+              </div>
+              <div class="form-element">
+                <label for="Pincode">Pincode</label>
+                <input
+                type="number"
+                name="Pincode"
+                id="Pincode"
+                
+              />
+              </div>
+              <div class="form-element">
+                <label for="State">State</label>
+                <input
+                type="text"
+                name="State"
+                id="State"
+                
+              />
+              </div>
+              <div class="form-element">
+                <label for="PCountry">Country</label>
+                <input
+                type="text"
+                name="PCountry"
+                id="PCountry"
+                
+              />
+              </div>
+              <div class="form-element">
+               <button>Submit</button>
+              </div>
+            </div>
+          </div>
+          </div>
+          <!-- popup end -->
+
+            <div>
+              <select name="land" id="Iland">
+                <option value="landtype">Land Type</option>
+                <option value="Ibuiltup">Built Up</option>
+                <option value="Iforsale">For Sale</option>
+                <option value="Irent">For Rent/Lease</option>
+              </select>
+              <div class="landType data" id="Ibuiltup">
+                <div class="builtup">
+                  <div class="buildlabel">
+                    <label for="occdate">Occupation Date</label>
+                    <label for="occdate">Sub Category</label>
+                    <label for="occdate">Unit Type</label>
+                    <label for="occdate">Total Floor</label>
+                    <label for="occdate">Floor On</label>
+                    <label for="occdate">Super Area</label>
+                    <label for="occdate">Buildup Area</label>
+                    <label for="occdate">Carpet Area</label>
+                    <label for="occdate" id="groundf">Ground Floor</label>
+                  <label for="occdate" id="sf">Second Floor</label>
+                  <label for="occdate" id="tf">Third Floor</label>
+                  <label for="occdate" id="af">Age of construction</label>
+                  <label for="occdate" id="bal">Balcony</label>
+                  <label for="occdate" id="fs">Furnished Status</label>
+                  <label for="occdate" id="ame">Amenities</label>
+                  </div>
+                </div>
+
+                <div class="buildinp">
+                  <input type="date" name="bdate" id="bdate" />
+                  <select name="subcategory" id="subc">
+                    <option value="House">House</option>
+                    <option value="BuilderFloor">Builder Floor</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Duplex">Duplex</option>
+                    <option value="Triplex">Triplex</option>
+                    <option value="Bunglow">Bunglow</option>
+                    <option value="HBC House">HBC House</option>
+                    <option value="halfconst">25% Constructed</option>
+                    <option value="boundryWall">Boundary Wall</option>
+                  </select>
+                  <input type="number" name="unitype" id="unitype" min="0" />
+                  <input type="number" name="floorT" id="floorT" />
+                  <input type="number" name="floorOn" id="floorOn" />
+                  <input type="number" name="totalB" id="totlalB" />
+                  <input type="number" name="buildarea" id="buildarea" />
+                  <input type="number" name="carpetarea" id="carpetarea" />
+                  
+                  <input type="number" name="groundfloor" id="groundfloor" />
+                  <input type="number" name="secondfloor" id="secondfloor" />
+                  <input type="number" name="thirdfloor" id="thirdfloor" />
+
+                 
+
+                  <input type="number" name="age" id="age" />
+                  <input type="number" name="balcony" id="balcony" />
+                  <select name="furnished" id="furnished">
+                    <option value="Furnished">Furnished</option>
+                    <option value="unFurnished">Un-Furnished</option>
+                    <option value="SemiFurnished">Semi-Furnished</option>
+                  </select>
+                  <input type="number" name="amenities" id="amenities" />
+
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="forSale data" id="Iforsale">
+              <div class="saleLabel">
+                <label for="Exprice">Expected Price</label>
+                <label for="Priceper">Price per </label>
+                <label for="QuotePrice">Quote Price</label>
+                <label for="DealType">Deal Type</label>
+                <label for="Source">Source</label>
+                <label for="CommunicationDate">Communication Date</label>
+                <label for="FollowUpDate">Follow Up Date</label>
+                <label for="User">User</label>
+              </div>
+              <div class="saleInput">
+                <input type="number" name="exPrice" id="exPrice" />
+                <select name="Priceper" id="Priceper">
+                  <option value="Sq yard">Sq yard</option>
+                  <option value="meter">meter</option>
+                  <option value="feet">feet</option>
+                </select>
+                <input type="number" name="QuotePrice" id="QuotePrice" />
+                <select id="cat">
+                  <option value="Hot">Hot</option>
+                  <option value="Warm">Warm</option>
+                  <option value="Cold">Cold</option>
+                </select>
+                <select id="online">
+                  <option value="Facebook">Facebook</option>
+                  <option value="Olx">Olx</option>
+                  <option value="nintynineAcre">99 Acre</option>
+                  <option value="Walkin">Walkin</option>
+                  <option value="Hoarding">Hoarding</option>
+                  <option value="Google">Google</option>
+                  <option value="SquareYards">Square Yards</option>
+                  <option value="Megicbricks">Megicbricks</option>
+                </select>
+                <input
+                  type="date"
+                  name="CommunicationDate"
+                  id="CommunicationDate"
+                />
+                <input type="date" name="FollowUpDate" id="FollowUpDate" />
+                <select name="User" id="Use">
+                  <option value="Admin">Admin</option>
+                  <option value="Sales Manager">Sales Manager</option>
+                  <option value="Astt Sales Manager">Astt Sales Manager</option>
+                  <option value="Inventory Manager">Inventory Manager</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="rentu data" id="Irent">
+              <div class="rentLabel">
+                <label for="RentAmmount">Rent Ammount</label>
+                <label for="LockInPeriod">Lock In Period</label>
+                <label for="SecurityDeposit">Security Deposit</label>
+                <label for="MaintanenceCharge">Maintanence Charge</label>
+                <label for="RentEscallation">Rent Escallation</label>
+                <label for="TotalRent">TotalRent</label>
+                <label for="FitoutPeriod" id="fp">Fitout Period</label>
+                <label for="User">User</label>
+              </div>
+              <div class="rentInput">
+                <input type="number" name="RentAmmount" id="RentAmmount" />
+                <input type="text" name="LockInPeriod" id="LockInPeriod" />
+                <input
+                  type="number"
+                  name="SecurityDeposit"
+                  id="SecurityDeposit"
+                />
+                <input
+                  type="text"
+                  name="RentEscallation"
+                  id="RentEscallation"
+                />
+                <input
+                type="number"
+                name="MaintanenceCharge"
+                id="MaintanenceCharge"
+              />
+                <input type="number" name="TotalRent" id="TotalRent" />
+                <input type="number" name="FitoutPeriod" id="FitoutPeriod" />
+                <select name="User" id="User">
+                  <option value="Admin">Admin</option>
+                  <option value="Sales Manager">Sales Manager</option>
+                  <option value="Astt Sales Manager">Astt Sales Manager</option>
+                  <option value="Inventory Manager">Inventory Manager</option>
+                </select>
+              </div>
+            </div>
+
+            <button id="btn" type="submit">Submit Inventory</button>
+          </form>
+          </form>
+        </div>
+      </div>
+      <div class="addinventory" id="institutional">
+        <h1>Add Inventory (Institutional)</h1>
+
+        <div class="fillexist">
+          <form action="/addinginventory" class="filldata" method="post">
+            <div class="topfill">
+              <!-- <input type="checkbox" name="check" id="check1"/> -->
+              <input type="hidden" name="PropType" value="Institutional">
+              <label for="Number">Property Number</label>
+              <!-- <label for="SubCategory">SubCategory</label> -->
+              <label for="Size">Size</label>
+              <label for="subloc">Sub Location</label>
+              <label for="width">Width </label>
+              <label for="len">Length</label>
+              <label for="ta">Total Area</label>
+              <label for="metrics">Plot Area</label>
+              <label for="Direction">Direction</label>
+              <label for="facing">Facing</label>
+              <label for="road">Road</label>
+              <label for="nearto">Near To</label>
+              <label for="ownership">Ownership</label>
+              <label for="location">Location</label>
+              <label for="detailing">Owner Details</label>
+            </div>
+
+            <div class="menufill" id="addNew">
+              <!-- <input type="checkbox" name="check" id="check2" /> -->
+              <input type="number" name="number" id="inNumber" min="0" />
+              <!-- <select id="subCategory" name="subCategory">
+                <option value="Shop">Shop</option>
+                <option value="Showroom">Showroom</option>
+                <option value="Office">Office</option>
+                <option value="RetailStore">RetailStore</option>
+                <option value="HyperMarket">HyperMarket</option>
+                <option value="SOHO">SOHO</option>
+                <option value="Multiplex">Multiplex</option>
+              </select> -->
+              <select name="size" id="size">
+                <option value="School">School</option>
+                <option value="College">College</option>
+                <option value="Hospital">Hospital</option>
+                <option value="Creche">Creche</option>
+                <option value="Clinic">Clinic</option>
+                <option value="Hotel">Hotel</option>
+                <option value="Resort">Resort</option>
+                <option value=" BanquetHall"> Banquet Hall</option>
+              </select>
+                
+              <select name="subLoc" id="subloc">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+              </select>
+              <input type="number" name="width" id="width" min="0" />
+              <input type="number" name="len" id="len" min="0" />
+              <input type="number" name="ta" id="ta" min="0" />
+              <!-- <input type="number" name="" id=""> -->
+              <select name="metrics" id="metrics">
+                <option value="Metre">Metrics</option>
+                <option value="sqaure yard">Sq Yard</option>
+                <option value="acre">Acre</option>
+                <option value="kanal">Kanal</option>
+              </select>
+              <select name="direction" id="direction">
+                <option value="north">North</option>
+                <option value="south">South</option>
+                <option value="east">East</option>
+                <option value="northeast">NorthEast</option>
+                <option value="southeast">SouthEast</option>
+                <option value="northwest">NorthWest</option>
+                <option value="southwest">SouthWest</option>
+              </select>
+              <select name="facing" id="facing">
+                <option value="Yes">Parking</option>
+                <option value="No">Dead Face</option>
+              </select>
+              <select name="road" id="road">
+                <option value="9 Meter">9Mtr</option>
+                <option value="12 Meter">12Mtr</option>
+                <option value="18 Meter">18Mtr</option>
+                <option value="34 Meter">24Mtr</option>
+                <option value="60 Meter">60Mtr</option>
+              </select>
+              <select name="near" id="nearto">
+                <option value="school">School</option>
+                <option value="Station">Station</option>
+                <option value="BusStand">Bus Stand</option>
+                <option value="MainRoad">Main Road</option>
+                <option value="Highway">HighWay</option>
+              </select>
+              <select name="ownership" id="ownership">
+                <option value="Freehold">Freehold</option>
+                <option value="Leasehold">LeaseHold</option>
+              </select>
+
+              <a href="https://www.google.com.qa/maps/d/u/0/viewer?mid=1Qa55OcDQrXXucbFKwTfi0HLGH6tccKY&ll=29.967200950084447%2C76.89341714999996&z=19"><span class="btn" id="location"> Location </span></a>
+              <span onclick="togglePopup()" class="btn">Owner Details</span>
+
+            </div>
+            <!-- popup start -->
+            <div class="popup" id="popup-1">
+              <div class="overlay"></div>
+              <div class="content">
+                  <div class="close-btn" onclick="togglePopup()">
+                      &times;
+                  </div>
+                  <h1>Owner Details</h1>
+                  <div class="form">
+                <div class="form-element">
+                  <label for="ownerName">Owner Details</label>
+                  <input
+                  type="text"
+                  name="ownerName"
+                  id="ownerName"
+                />
+                </div>
+                <div class="form-element">
+                  <label for="MobileNumber">Mobile Number</label>
+                  <input
+                  type="text"
+                  name="MobileNumber"
+                  id="MobileNumber"
+                  minlength="10"
+                  min="0"
+                  max="9999999999"
+                  
+                />
+                </div>
+                <div class="form-element">
+                  <label for="Email">Email</label>
+                  <input
+                  type="text"
+                  name="Email"
+                  id="Email"   
+                />
+                </div>
+                <div class="form-element">
+                  <label for="demandfor">Demand</label>
+                  <input
+                  type="text"
+                  name="demandfor"
+                  id="demandfor"   
+                />
+                </div>
+
+                <div class="form-element">
+                  <label for="availfrom">Available From</label>
+                  <input
+                  type="date"
+                  name="availfrom"
+                  id="availfrom"
+                />
+                </div>
+
+                <div class="form-element">
+                  <label for="lastcontacted">Last Contacted</label>
+                  <input
+                  type="datetime-local"
+                  name="lastcontact"
+                  id="lastcontacted"
+                />
+                </div>
+                
+                <div class="form-element">
+                  <label for="fatherName">Father Name</label>
+                  <input
+                  type="text"
+                  name="fatherName"
+                  id="fatherName"
+                  
+                />
+                </div>
+                <div class="form-element">
+                  <label for="Address">Address</label>
+                  <input
+                  type="text"
+                  name="Address"
+                  id="Address"
+                  
+                />
+                </div>
+                <div class="form-element">
+                  <label for="HouseNo">House No.</label>
+                  <input
+                  type="text"
+                  name="HouseNo"
+                  id="HouseNo"
+                  
+                />
+                </div>
+                <div class="form-element">
+                  <label for="Location">Location</label>
+                  <input
+                  type="text"
+                  name="Location"
+                  id="Location"
+                />
+                </div>
+                <div class="form-element">
+                  <label for="Sublocation">Sublocation</label>
+                  <input
+                  type="text"
+                  name="Sublocation"
+                  id="Sublocation"
+                  
+                />
+                </div>
+                <div class="form-element">
+                  <label for="City">City</label>
+                  <input
+                  type="text"
+                  name="City"
+                  id="City"
+                />
+                </div>
+                <div class="form-element">
+                  <label for="Pincode">Pincode</label>
+                  <input
+                  type="number"
+                  name="Pincode"
+                  id="Pincode"
+                  
+                />
+                </div>
+                <div class="form-element">
+                  <label for="State">State</label>
+                  <input
+                  type="text"
+                  name="State"
+                  id="State"
+                  
+                />
+                </div>
+                <div class="form-element">
+                  <label for="PCountry">Country</label>
+                  <input
+                  type="text"
+                  name="PCountry"
+                  id="PCountry"
+                  
+                />
+                </div>
+                <div class="form-element">
+                 <button>Submit</button>
+                </div>
+              </div>
+            </div>
+            </div>
+            <!-- popup end -->
+
+            <div>
+              <select name="land" id="Inland">
+                <option value="Inlandtype">Land Type</option>
+                <option value="Inbuiltup">Built Up</option>
+                <option value="Inforsale">For Sale</option>
+                <option value="Inrent">For Rent/Lease</option>
+              </select>
+              <div class="landType data" id="Inbuiltup">
+                <div class="builtup">
+                  <div class="buildlabel">
+                    <label for="occdate">Occupation Date</label>
+                    <label for="occdate">Sub Category</label>
+                    <label for="occdate">Unit Type</label>
+                    <label for="occdate">Total Floor</label>
+                    <label for="occdate">Floor On</label>
+                    <label for="occdate">Super Area</label>
+                    <label for="occdate">Buildup Area</label>
+                    <label for="occdate">Carpet Area</label>
+                    <label for="occdate" id="groundf">Ground Floor</label>
+                    <label for="occdate" id="sf">Second Floor</label>
+                    <label for="occdate" id="tf">Third Floor</label>
+                    <label for="occdate" id="af">Age of construction</label>
+                    <label for="occdate" id="bal">Balcony</label>
+                    <label for="occdate" id="fs">Furnished Status</label>
+                    <label for="occdate" id="ame">Amenities</label>
+                  </div>
+                </div>
+
+                <div class="buildinp">
+                  <input type="date" name="bdate" id="bdate" />
+                  <select name="subcategory" id="subc">
+                    <option value="House">House</option>
+                    <option value="BuilderFloor">Builder Floor</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Duplex">Duplex</option>
+                    <option value="Triplex">Triplex</option>
+                    <option value="Bunglow">Bunglow</option>
+                    <option value="HBC House">HBC House</option>
+                    <option value="halfconst">25% Constructed</option>
+                    <option value="boundryWall">Boundary Wall</option>
+                  </select>
+                  <input type="number" name="unitype" id="unitype" min="0" />
+                  <input type="number" name="floorT" id="floorT" />
+                  <input type="number" name="floorOn" id="floorOn" />
+                  <input type="number" name="totalB" id="totlalB" />
+                  <input type="number" name="buildarea" id="buildarea" />
+                  <input type="number" name="carpetarea" id="carpetarea" />
+                 
+                  <input type="number" name="groundfloor" id="groundfloor" />
+                  <input type="number" name="secondfloor" id="secondfloor" />
+                  <input type="number" name="thirdfloor" id="thirdfloor" />
+
+              
+                  <input type="number" name="age" id="age" />
+                  <input type="number" name="balcony" id="balcony" />
+                  <select name="furnished" id="furnished">
+                    <option value="Furnished">Furnished</option>
+                    <option value="unFurnished">Un-Furnished</option>
+                    <option value="SemiFurnished">Semi-Furnished</option>
+                  </select>
+                  <input type="number" name="amenities" id="amenities" />
+
+                 
+                </div>
+              </div>
+            </div>
+
+            <div class="forSale data" id="Inforsale">
+              <div class="saleLabel">
+                <label for="Exprice">Expected Price</label>
+                <label for="Priceper">Price per </label>
+                <label for="QuotePrice">Quote Price</label>
+                <label for="DealType">Deal Type</label>
+                <label for="Source">Source</label>
+                <label for="CommunicationDate">Communication Date</label>
+                <label for="FollowUpDate">Follow Up Date</label>
+                <label for="User">User</label>
+              </div>
+              <div class="saleInput">
+                <input type="number" name="exPrice" id="exPrice" />
+                <select name="Priceper" id="Priceper">
+                  <option value="Sq yard">Sq yard</option>
+                  <option value="meter">meter</option>
+                  <option value="feet">feet</option>
+                </select>
+                <input type="number" name="QuotePrice" id="QuotePrice" />
+                <select id="cat">
+                  <option value="Hot">Hot</option>
+                  <option value="Warm">Warm</option>
+                  <option value="Cold">Cold</option>
+                </select>
+                <select id="online">
+                  <option value="Facebook">Facebook</option>
+                  <option value="Olx">Olx</option>
+                  <option value="nintynineAcre">99 Acre</option>
+                  <option value="Walkin">Walkin</option>
+                  <option value="Hoarding">Hoarding</option>
+                  <option value="Google">Google</option>
+                  <option value="SquareYards">Square Yards</option>
+                  <option value="Megicbricks">Megicbricks</option>
+                </select>
+                <input
+                  type="date"
+                  name="CommunicationDate"
+                  id="CommunicationDate"
+                />
+                <input type="date" name="FollowUpDate" id="FollowUpDate" />
+                <select name="User" id="Use">
+                  <option value="Admin">Admin</option>
+                  <option value="Sales Manager">Sales Manager</option>
+                  <option value="Astt Sales Manager">Astt Sales Manager</option>
+                  <option value="Inventory Manager">Inventory Manager</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="rentu data" id="Inrent">
+              <div class="rentLabel">
+                <label for="RentAmmount">Rent Ammount</label>
+                <label for="LockInPeriod">Lock In Period</label>
+                <label for="SecurityDeposit">Security Deposit</label>
+                <label for="MaintanenceCharge">Maintanence Charge</label>
+                <label for="RentEscallation">Rent Escallation</label>
+                <label for="TotalRent">TotalRent</label>
+                <label for="FitoutPeriod" id="fp">Fitout Period</label>
+                <label for="User">User</label>
+              </div>
+              <div class="rentInput">
+                <input type="number" name="RentAmmount" id="RentAmmount" />
+                <input type="text" name="LockInPeriod" id="LockInPeriod" />
+                <input
+                  type="number"
+                  name="SecurityDeposit"
+                  id="SecurityDeposit"
+                />
+                <input
+                  type="text"
+                  name="RentEscallation"
+                  id="RentEscallation"
+                />
+                <input
+                type="number"
+                name="MaintanenceCharge"
+                id="MaintanenceCharge"
+              />
+                <input type="number" name="TotalRent" id="TotalRent" />
+                <input type="number" name="FitoutPeriod" id="FitoutPeriod" />
+                <select name="User" id="User">
+                  <option value="Admin">Admin</option>
+                  <option value="Sales Manager">Sales Manager</option>
+                  <option value="Astt Sales Manager">Astt Sales Manager</option>
+                  <option value="Inventory Manager">Inventory Manager</option>
+                </select>
+              </div>
+            </div>
+
+            <button id="btn" type="submit">Submit Inventory</button>
+          </form>
+          </form>
+        </div>
+      </div>
+
+
+      <div class="addinventory" id="agricultural">
+        <h1>Add Inventory (agricultural)</h1>
+
+        <div class="fillexist">
+          <form action="/addinginventory" class="filldata" method="post">
+            <div class="topfill">
+              <!-- <input type="checkbox" name="check" id="check1"/> -->
+              <input type="hidden" name="PropType" value="Agricultural">
+              <label for="Number">Property Number</label>
+              <!-- <label for="SubCategory">SubCategory</label> -->
+              <label for="Size">Size</label>
+              <label for="subloc">Sub Location</label>
+              <label for="width">Width </label>
+              <label for="len">Length</label>
+              <label for="ta">Total Area</label>
+              <label for="metrics">Plot Area</label>
+              <label for="Direction">Direction</label>
+              <label for="facing">Facing</label>
+              <label for="road">Road</label>
+              <label for="nearto">Near To</label>
+              <label for="ownership">Ownership</label>
+              <label for="location">Location</label>
+              <label for="detailing">Owner Details</label>
+            </div>
+
+            <div class="menufill" id="addNew">
+              <!-- <input type="checkbox" name="check" id="check2" /> -->
+              <input type="number" name="number" id="inNumber" min="0" />
+              <!-- <select id="subCategory" name="subCategory">
+                <option value="Shop">Shop</option>
+                <option value="Showroom">Showroom</option>
+                <option value="Office">Office</option>
+                <option value="RetailStore">RetailStore</option>
+                <option value="HyperMarket">HyperMarket</option>
+                <option value="SOHO">SOHO</option>
+                <option value="Multiplex">Multiplex</option>
+              </select> -->
+              <select name="size" id="size">
+                <option value="Land">Land</option>
+                <option value="Farm">Farm</option>
+                <option value="House">House</option>
+                <option value="Diary">Diary</option>
+                
+              </select>
+              <select name="subLoc" id="subloc">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+              </select>
+              <input type="number" name="width" id="width" min="0" />
+              <input type="number" name="len" id="len" min="0" />
+              <input type="number" name="ta" id="ta" min="0" />
+              <!-- <input type="number" name="" id=""> -->
+              <select name="metrics" id="metrics">
+                <option value="Metre">Metrics</option>
+                <option value="sqaure yard">Sq Yard</option>
+                <option value="acre">Acre</option>
+                <option value="kanal">Kanal</option>
+              </select>
+              <select name="direction" id="direction">
+                <option value="north">North</option>
+                <option value="south">South</option>
+                <option value="east">East</option>
+                <option value="northeast">NorthEast</option>
+                <option value="southeast">SouthEast</option>
+                <option value="northwest">NorthWest</option>
+                <option value="southwest">SouthWest</option>
+              </select>
+              <select name="facing" id="facing">
+                <option value="Yes">Parking</option>
+                <option value="No">Dead Face</option>
+              </select>
+              <select name="road" id="road">
+                <option value="9 Meter">9Mtr</option>
+                <option value="12 Meter">12Mtr</option>
+                <option value="18 Meter">18Mtr</option>
+                <option value="34 Meter">24Mtr</option>
+                <option value="60 Meter">60Mtr</option>
+              </select>
+              <select name="near" id="nearto">
+                <option value="school">School</option>
+                <option value="Station">Station</option>
+                <option value="BusStand">Bus Stand</option>
+                <option value="MainRoad">Main Road</option>
+                <option value="Highway">HighWay</option>
+              </select>
+              <select name="ownership" id="ownership">
+                <option value="Freehold">Freehold</option>
+                <option value="Leasehold">LeaseHold</option>
+              </select>
+
+              <a href="https://www.google.com.qa/maps/d/u/0/viewer?mid=1Qa55OcDQrXXucbFKwTfi0HLGH6tccKY&ll=29.967200950084447%2C76.89341714999996&z=19"><span class="btn" id="location"> Location </span></a>
+              <span onclick="togglePopup()" class="btn">Owner Details</span>
+
+            </div>
+           <!-- popup start -->
+           <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup()">
+                    &times;
+                </div>
+                <h1>Owner Details</h1>
+                <div class="form">
+              <div class="form-element">
+                <label for="ownerName">Owner Details</label>
+                <input
+                type="text"
+                name="ownerName"
+                id="ownerName"
+              />
+              </div>
+              <div class="form-element">
+                <label for="MobileNumber">Mobile Number</label>
+                <input
+                type="text"
+                name="MobileNumber"
+                id="MobileNumber"
+                minlength="10"
+                min="0"
+                max="9999999999"
+                
+              />
+              </div>
+              <div class="form-element">
+                <label for="Email">Email</label>
+                <input
+                type="text"
+                name="Email"
+                id="Email"   
+              />
+              </div>
+
+              <div class="form-element">
+                <label for="lastcontacted">Last Contacted</label>
+                <input
+                type="datetime-local"
+                name="lastcontact"
+                id="lastcontacted"
+              />
+              </div>
+              
+              <div class="form-element">
+                <label for="fatherName">Father Name</label>
+                <input
+                type="text"
+                name="fatherName"
+                id="fatherName"
+                
+              />
+              </div>
+              <div class="form-element">
+                <label for="Address">Address</label>
+                <input
+                type="text"
+                name="Address"
+                id="Address"
+                
+              />
+              </div>
+              <div class="form-element">
+                <label for="HouseNo">House No.</label>
+                <input
+                type="text"
+                name="HouseNo"
+                id="HouseNo"
+                
+              />
+              </div>
+              <div class="form-element">
+                <label for="Location">Location</label>
+                <input
+                type="text"
+                name="Location"
+                id="Location"
+              />
+              </div>
+              <div class="form-element">
+                <label for="Sublocation">Sublocation</label>
+                <input
+                type="text"
+                name="Sublocation"
+                id="Sublocation"
+                
+              />
+              </div>
+              <div class="form-element">
+                <label for="City">City</label>
+                <input
+                type="text"
+                name="City"
+                id="City"
+                
+              />
+              </div>
+              <div class="form-element">
+                <label for="Pincode">Pincode</label>
+                <input
+                type="number"
+                name="Pincode"
+                id="Pincode"
+                
+              />
+              </div>
+              <div class="form-element">
+                <label for="State">State</label>
+                <input
+                type="text"
+                name="State"
+                id="State"
+                
+              />
+              </div>
+              <div class="form-element">
+                <label for="PCountry">Country</label>
+                <input
+                type="text"
+                name="PCountry"
+                id="PCountry"
+                
+              />
+              </div>
+              <div class="form-element">
+               <button>Submit</button>
+              </div>
+            </div>
+          </div>
+          </div>
+          <!-- popup end -->
+
+            <div>
+              <select name="land" id="Aland">
+                <option value="Alandtype">Land Type</option>
+                <option value="Abuiltup">Built Up</option>
+                <option value="Aforsale">For Sale</option>
+                <option value="Arent">For Rent/Lease</option>
+              </select>
+              <div class="landType data" id="Abuiltup">
+                <div class="builtup">
+                  <div class="buildlabel">
+                    <label for="occdate">Occupation Date</label>
+                    <label for="occdate">Sub Category</label>
+                    <label for="occdate">Unit Type</label>
+                    <label for="occdate">Total Floor</label>
+                    <label for="occdate">Floor On</label>
+                    <label for="occdate">Super Area</label>
+                    <label for="occdate">Buildup Area</label>
+                    <label for="occdate">Carpet Area</label>
+                    <label for="occdate" id="groundf">Ground Floor</label>
+                    <label for="occdate" id="sf">Second Floor</label>
+                    <label for="occdate" id="tf">Third Floor</label>
+                    <label for="occdate" id="af">Age of construction</label>
+                    <label for="occdate" id="bal">Balcony</label>
+                    <label for="occdate" id="fs">Furnished Status</label>
+                    <label for="occdate" id="ame">Amenities</label>
+                  </div>
+                </div>
+
+                <div class="buildinp">
+                  <input type="date" name="bdate" id="bdate" />
+                  <select name="subcategory" id="subc">
+                    <option value="House">House</option>
+                    <option value="BuilderFloor">Builder Floor</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Duplex">Duplex</option>
+                    <option value="Triplex">Triplex</option>
+                    <option value="Bunglow">Bunglow</option>
+                    <option value="HBC House">HBC House</option>
+                    <option value="halfconst">25% Constructed</option>
+                    <option value="boundryWall">Boundary Wall</option>
+                  </select>
+                  <input type="number" name="unitype" id="unitype" min="0" />
+                  <input type="number" name="floorT" id="floorT" />
+                  <input type="number" name="floorOn" id="floorOn" />
+                  <input type="number" name="totalB" id="totlalB" />
+                  <input type="number" name="buildarea" id="buildarea" />
+                  <input type="number" name="carpetarea" id="carpetarea" />
+                  <input type="number" name="groundfloor" id="groundfloor" />
+                  <input type="number" name="secondfloor" id="secondfloor" />
+                  <input type="number" name="thirdfloor" id="thirdfloor" />
+
+
+                  <input type="number" name="age" id="age" />
+                  <input type="number" name="balcony" id="balcony" />
+                  <select name="furnished" id="furnished">
+                    <option value="Furnished">Furnished</option>
+                    <option value="unFurnished">Un-Furnished</option>
+                    <option value="SemiFurnished">Semi-Furnished</option>
+                  </select>
+                  <input type="number" name="amenities" id="amenities" />
+
+                  
+
+                
+                </div>
+              </div>
+            </div>
+
+            <div class="forSale data" id="Aforsale">
+              <div class="saleLabel">
+                <label for="Exprice">Expected Price</label>
+                <label for="Priceper">Price per </label>
+                <label for="QuotePrice">Quote Price</label>
+                <label for="DealType">Deal Type</label>
+                <label for="Source">Source</label>
+                <label for="CommunicationDate">Communication Date</label>
+                <label for="FollowUpDate">Follow Up Date</label>
+                <label for="User">User</label>
+              </div>
+              <div class="saleInput">
+                <input type="number" name="exPrice" id="exPrice" />
+                <select name="Priceper" id="Priceper">
+                  <option value="Sq yard">Sq yard</option>
+                  <option value="meter">meter</option>
+                  <option value="feet">feet</option>
+                </select>
+                <input type="number" name="QuotePrice" id="QuotePrice" />
+                <select id="cat">
+                  <option value="Hot">Hot</option>
+                  <option value="Warm">Warm</option>
+                  <option value="Cold">Cold</option>
+                </select>
+                <select id="online">
+                  <option value="Facebook">Facebook</option>
+                  <option value="Olx">Olx</option>
+                  <option value="nintynineAcre">99 Acre</option>
+                  <option value="Walkin">Walkin</option>
+                  <option value="Hoarding">Hoarding</option>
+                  <option value="Google">Google</option>
+                  <option value="SquareYards">Square Yards</option>
+                  <option value="Megicbricks">Megicbricks</option>
+                </select>
+                <input
+                  type="date"
+                  name="CommunicationDate"
+                  id="CommunicationDate"
+                />
+                <input type="date" name="FollowUpDate" id="FollowUpDate" />
+                <select name="User" id="Use">
+                  <option value="Admin">Admin</option>
+                  <option value="Sales Manager">Sales Manager</option>
+                  <option value="Astt Sales Manager">Astt Sales Manager</option>
+                  <option value="Inventory Manager">Inventory Manager</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="rentu data" id="Arent">
+              <div class="rentLabel">
+                <label for="RentAmmount">Rent Ammount</label>
+                <label for="LockInPeriod">Lock In Period</label>
+                <label for="SecurityDeposit">Security Deposit</label>
+                <label for="MaintanenceCharge">Maintanence Charge</label>
+                <label for="RentEscallation">Rent Escallation</label>
+                <label for="TotalRent">TotalRent</label>
+                <label for="FitoutPeriod" id="fp">Fitout Period</label>
+                <label for="User">User</label>
+              </div>
+              <div class="rentInput">
+                <input type="number" name="RentAmmount" id="RentAmmount" />
+                <input type="text" name="LockInPeriod" id="LockInPeriod" />
+                <input
+                  type="number"
+                  name="SecurityDeposit"
+                  id="SecurityDeposit"
+                />
+                <input
+                  type="text"
+                  name="RentEscallation"
+                  id="RentEscallation"
+                />
+                <input
+                type="number"
+                name="MaintanenceCharge"
+                id="MaintanenceCharge"
+              />
+                <input type="number" name="TotalRent" id="TotalRent" />
+                <input type="number" name="FitoutPeriod" id="FitoutPeriod" />
+                <select name="User" id="User">
+                  <option value="Admin">Admin</option>
+                  <option value="Sales Manager">Sales Manager</option>
+                  <option value="Astt Sales Manager">Astt Sales Manager</option>
+                  <option value="Inventory Manager">Inventory Manager</option>
+                </select>
+              </div>
+            </div>
+
+            <button id="btn" type="submit">Submit Inventory</button>
+          </form>
+          </form>
+        </div>
+      </div>
+
+      
+
+      
+
+      <div class="downmenu">
+        <!-- <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+          >
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path
+              d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"
+            />
+          </svg>
+          <a href="#" onclick="removervarient()">Delete</a>
+        </span>
+
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+          >
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path
+              d="M2 18h10v2H2v-2zm0-7h20v2H2v-2zm0-7h20v2H2V4zm16 14v-3h2v3h3v2h-3v3h-2v-3h-3v-2h3z"
+            />
+          </svg>
+          <a href="#" onclick="addvarient()">Add New</a>
+        </span> -->
+      </div>
+    </div>
+
+    <script>
+      var counter = 1;
+      var form = document.getElementById("addNew");
+      html =
+        '<div class="menufill" id="newfill">\
+              <input type="checkbox" name="check" id="check2" />\
+              <input type="number" name="number" id="Number" min="0" />\
+              <input type="text" name="Address" id="Address">\
+              <select id="SubCategory">\
+                <option value="Shop">Shop</option>\
+                <option value="Showroom">Showroom</option>\
+                <option value="Office">Office</option>\
+                <option value="RetailStore">RetailStore</option>\
+                <option value="HyperMarket">HyperMarket</option>\
+                <option value="SOHO">SOHO</option>\
+                <option value="Multiplex">Multiplex</option>\
+              </select>\
+              <select name="size" id="Size">\
+                <option value="SCO">SCO</option>\
+                <option value="SCF">SCF</option>\
+                <option value="Booth">Booth</option>\
+                <option value="Dss">Dss</option>\
+                <option value="Keosak">Keosak</option>\
+                <option value="Plot">Plot</option>\
+              </select>\
+              <select name="subLoc" id="subloc">\
+                <option value="A">A</option>\
+                <option value="B">B</option>\
+                <option value="C">C</option>\
+                <option value="D">D</option>\
+              </select>\
+              <input type="number" name="width" id="width" min="0" />\
+              <input type="number" name="subtype" id="len" min="0" />\
+              <!-- <input type="number" name="" id=""> -->\
+              <select name="size" id="size">\
+                <option value="Metre">Metrics</option>\
+                <option value="">Sq Yard</option>\
+                <option value="">Acre</option>\
+                <option value="">Kanal</option>\
+              </select>\
+              <select name="direction" id="Direction">\
+                <option value="north">North</option>\
+                <option value="south">South</option>\
+                <option value="east">East</option>\
+                <option value="northeast">NorthEast</option>\
+                <option value="southeast">SouthEast</option>\
+                <option value="northwest">NorthWest</option>\
+                <option value="southwest">SouthWest</option>\
+              </select>\
+              <select name="facing" id="facing">\
+                <option value="Yes">Parking</option>\
+                <option value="No">Dead Face</option>\
+              </select>\
+              <select name="road" id="road">\
+                <option value="nineMeter">9Mtr</option>\
+                <option value="twelveMeter">12Mtr</option>\
+                <option value="eighteenMeter">18Mtr</option>\
+                <option value="twentyfourMeter">24Mtr</option>\
+                <option value="sixtyMeter">60Mtr</option>\
+              </select>\
+              <select name="near" id="nearto">\
+                <option value="school">School</option>\
+                <option value="Station">Station</option>\
+                <option value="BusStand">Bus Stand</option>\
+                <option value="MainRoad">Main Road</option>\
+                <option value="Highway">HighWay</option>\
+              </select>\
+              <select name="ownership" id="ownership">\
+                <option value="Freehold">Freehold</option>\
+                <option value="Leasehold">LeaseHold</option>\
+              </select>\
+              <button class="btn" id="location">Location</button>\
+              <button class="btn">\
+                Owner Details\
+              </button>\
+            </div>';
+
+      function addvarient() {
+        counter += 1;
+        form.innerHTML += html;
+      }
+
+      function removervarient() {
+        document.getElementById("newfill").remove();
+      }
+    </script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#land")
+          .on("change", function () {
+            $(".data").hide();
+            $("#" + $(this).val()).fadeIn(700);
+          }).change();
+          $("#commercialland").on("change",function(){
+            $(".commercialdata").hide();
+            $("#" + $(this).val()).fadeIn(700);
+          }).change()
+        $("#propType")
+          .on("change", function () {
+            $(".addinventory").hide();
+            $("#" + $(this).val()).fadeIn(700);
+          }).change();
+
+          $("#Cland").on("change",function(){
+            $(".data").hide();
+            $("#" + $(this).val()).fadeIn(700);
+          }).change();
+          $("#Iland").on("change",function(){
+            $(".data").hide();
+            $("#" + $(this).val()).fadeIn(700);
+          }).change();
+          $("#Inland").on("change",function(){
+            $(".data").hide();
+            $("#" + $(this).val()).fadeIn(700);
+          }).change();
+          $("#Aland").on("change",function(){
+            $(".data").hide();
+            $("#" + $(this).val()).fadeIn(700);
+          }).change();
+      });
+    </script>
+    <!-- popup -->
+    <script>
+      function togglePopup(){
+          document.getElementById("popup-1").classList.toggle("active")
+      }
+  </script>
+  </body>
+</html>
